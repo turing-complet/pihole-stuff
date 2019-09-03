@@ -19,5 +19,5 @@ $container = docker inspect -f '{{.State.Running}}' pihole
 
 if ($container -ne "true") {
     Write-Host "Pihole is not running. Starting it now."
-    docker-compose up
+    docker-compose up -d
 }
