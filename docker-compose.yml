@@ -12,7 +12,7 @@ services:
       - "443:443/tcp"
     environment:
       TZ: 'America/Los_Angeles'
-      # WEBPASSWORD: 'set a secure password here or it will be random'
+      WEBPASSWORD: 'password1!'
     # Volumes store your data between container upgrades
     volumes:
        - './etc-pihole/:/etc/pihole/'
