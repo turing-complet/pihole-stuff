@@ -8,8 +8,6 @@ if test $status -eq 0
     sudo systemctl stop systemd-resolved
 end
 
-set resolvconf (cat /etc/resolv.conf)
-
 if not grep -q "127.0.0.1" /etc/resolv.conf
     echo "Adding localhost to resolv.conf"
     sudo echo "nameserver 127.0.0.1" > /etc/resolv.conf

@@ -1,0 +1,8 @@
+[Unit]
+Description=Run Pihole.
+
+[Service]
+ExecStart=/usr/bin/fish /usr/bin/run.fish
+
+[Install]
+WantedBy=multi-user.target
